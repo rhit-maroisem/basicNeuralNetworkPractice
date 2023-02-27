@@ -161,7 +161,7 @@ def test_prediction(index, W1, b1, W2, b2):
 # running program here
 w1, b1, w2, b2 = gradient_descent(X_train, Y_train, 500, 0.1)
 
-for i in range(9):
-    test_prediction(i, w1, b1, w2, b2)
+
+test_prediction(1400, w1, b1, w2, b2)
 
 
