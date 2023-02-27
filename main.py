@@ -139,12 +139,14 @@ def gradient_descent(X, Y, iterations, alpha):
     return w1, b1, w2, b2
 
 
+# makes predictions based on the final model
 def make_predictions(X, W1, b1, W2, b2):
     _, _, _, A2 = forward_prop(W1, b1, W2, b2, X)
     predictions = get_predictions(A2)
     return predictions
 
 
+# tests accuracy of predictions made by the final model
 def test_prediction(index, W1, b1, W2, b2):
     current_image = X_train[:, index, None]
     prediction = make_predictions(X_train[:, index, None], W1, b1, W2, b2)
